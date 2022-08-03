@@ -27,6 +27,7 @@ class MyFirstApp extends StatelessWidget {
             onPressed: null
           ),
         ],
+          backgroundColor: Colors.redAccent,
         ),
       body: Column(
         children: [
@@ -41,8 +42,10 @@ class MyFirstApp extends StatelessWidget {
               'You have chosen answer 1',
               style: TextStyle(
                 fontSize: 22,
+                color: Colors.blueGrey,
               ),
             ),
+            disabledColor: Colors.redAccent,
             onPressed: null,
           ),
           RaisedButton(
@@ -50,8 +53,10 @@ class MyFirstApp extends StatelessWidget {
               'You have chosen answer 2',
               style: TextStyle(
                 fontSize: 22,
+                color: Colors.blueGrey,
               ),
             ),
+            disabledColor: Colors.redAccent,
             onPressed: null,
           ),
           RaisedButton(
@@ -59,8 +64,10 @@ class MyFirstApp extends StatelessWidget {
               'You have chosen answer 3',
               style: TextStyle(
                 fontSize: 22,
+                color: Colors.blueGrey,
               ),
             ),
+            disabledColor: Colors.redAccent,
             onPressed: null,
           ),
         ],
