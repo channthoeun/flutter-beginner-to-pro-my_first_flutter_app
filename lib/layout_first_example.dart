@@ -1,44 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_app/next_page.dart';
 import 'package:my_first_flutter_app/questions.dart';
+import 'package:my_first_flutter_app/snackbar.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-final SnackBar snackBarOne = const SnackBar(
-    content: Text(
-    'Alert has been pressed!',
-    style: TextStyle(fontSize: 30),
-  )
-);
-final SnackBar snackBarTwo = const SnackBar(
-    content: Text(
-    'Search has been pressed!',
-    style: TextStyle(fontSize: 30),
-  )
-);
-final SnackBar snackBarThree = const SnackBar(
-  content: Text(
-    'Navigation has been pressed!',
-    style: TextStyle(fontSize: 30),
-  )
-);
-
-void clickNextPage(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(
-    builder: (BuildContext context) {
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text('Know Yourself...'),
-        ),
-        body: const Center(
-          child: Text(
-            'Dig deep into every layer of your mind to find yourself...',
-            style: TextStyle(fontSize: 24),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      );
-  },
-  ));
-}
 
 class MyStatelessLayoutWidget extends StatelessWidget {
   final questions = [
@@ -71,7 +36,7 @@ class MyStatelessLayoutWidget extends StatelessWidget {
             icon: const Icon(Icons.navigate_next),
             tooltip: 'Next page',
             onPressed: () {
-              clickNextPage(context);
+              clickNextQuestion(context);
             },
           ),
         ],
