@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-final SnackBar snackBarOne = const SnackBar(
+const SnackBar snackBarOne = SnackBar(
     content: Text(
       'Alert has been press',
       style: TextStyle(fontSize: 30),
     )
 );
-final SnackBar snackBarTwo = const SnackBar(
+const SnackBar snackBarTwo = SnackBar(
     content: Text(
       'Search has been pressed',
       style: TextStyle(fontSize: 30),
     )
 );
-final SnackBar snackBarThree = const SnackBar(
+const SnackBar snackBarThree = SnackBar(
     content: Text(
       'Navigation has been pressed!',
       style: TextStyle(fontSize: 30),
