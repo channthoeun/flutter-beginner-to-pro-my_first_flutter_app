@@ -90,7 +90,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: const [
+        children: [
           Text(
             'Answer a few questions and know your level...',
             textAlign: TextAlign.center,
@@ -131,10 +131,25 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
             color: Colors.green,
             size: 30.0,
           ),
-          RaisedButton(
-            disabledColor: Colors.redAccent,
+          ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                    (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Theme
+                        .of(context)
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.5);
+                  } else if (states.contains(MaterialState.disabled)) {
+                    return Colors.green;
+                  }
+                  return Colors.white; // Use the component's default.
+                },
+              ),
+            ),
             onPressed: null,
-            child: Text(
+            child: const Text(
               'You have chosen answer 3',
               style: TextStyle(
                 fontSize: 22,
