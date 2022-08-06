@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/snackbar_and_page.dart';
 
 class MyNewLayout extends StatelessWidget {
-  MyNewLayout({Key? key}) : super(key: key);
+  const MyNewLayout({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -16,7 +18,7 @@ class MyNewLayout extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             tooltip: 'Search',
             onPressed: () {
               scaffoldKey.currentState?.showSnackBar(snackBarTwo);
@@ -31,13 +33,13 @@ class MyNewLayout extends StatelessWidget {
           ),
         ],
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           tooltip: 'Navigation menu',
           onPressed: () {
             scaffoldKey.currentState?.showSnackBar(snackBarThree);
           },
         ),
-        title: Text(
+        title: const Text(
           'War Quiz App',
           style: TextStyle(
             fontSize: 25.00,
@@ -54,40 +56,40 @@ class MyNewLayout extends StatelessWidget {
               alignment: Alignment.topCenter,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(top: 25.00),
+                  margin: const EdgeInsets.only(top: 25.00),
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.00),
                     color: Colors.redAccent,
                   ),
-                  child: Icon(Icons.landscape, color: Colors.brown),
+                  child: const Icon(Icons.landscape, color: Colors.brown),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 70.00, right: 50.00),
+                  margin: const EdgeInsets.only(top: 70.00, right: 50.00),
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.00),
                     color: Colors.green,
                   ),
-                  child: Icon(Icons.keyboard_arrow_down, color: Colors.black),
+                  child: const Icon(Icons.keyboard_arrow_down, color: Colors.black),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 50.00, top: 70.00),
+                  margin: const EdgeInsets.only(left: 50.00, top: 70.00),
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.00),
                     color: Colors.blueAccent,
                   ),
-                  child: Icon(Icons.keyboard_arrow_up, color: Colors.black),
+                  child: const Icon(Icons.keyboard_arrow_up, color: Colors.black),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 Text(
                   'Take a Quick War Quiz!',
                   style: TextStyle(
@@ -99,14 +101,14 @@ class MyNewLayout extends StatelessWidget {
             ),
             Column(
               children: [
-                Text(
+                const Text(
                   'Answer a few Questions to test your Knowledge, Scores will decide...',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25,
                   ),
                 ),
-                Text(
+                const Text(
                   '...EITHER...',
                   style: TextStyle(
                     fontSize: 22,
