@@ -43,7 +43,7 @@ void clickNextPage(BuildContext context) {
 }
 
 class MyStatelessScaffoldWidget extends StatelessWidget {
-  MyStatelessScaffoldWidget({Key? key}) : super(key: key);
+  const MyStatelessScaffoldWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(
+          const Text(
             'Answer a few questions and know your level...',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -109,7 +109,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
           ),
-          Icon(
+          const Icon(
             Icons.favorite,
             color: Colors.pink,
             size: 24.0,
@@ -126,7 +126,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
           ),
-          Icon(
+          const Icon(
             Icons.audiotrack,
             color: Colors.green,
             size: 30.0,
@@ -157,7 +157,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
           ),
-          Icon(
+          const Icon(
             Icons.beach_access,
             color: Colors.blue,
             size: 36.0,
