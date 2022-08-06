@@ -109,6 +109,12 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
           ),
+          Icon(
+            Icons.favorite,
+            color: Colors.pink,
+            size: 24.0,
+            semanticLabel: 'Text to announce in accessibility modes',
+          ),
           RaisedButton(
             disabledColor: Colors.redAccent,
             onPressed: null,
@@ -120,6 +126,11 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
           ),
+          Icon(
+            Icons.audiotrack,
+            color: Colors.green,
+            size: 30.0,
+          ),
           RaisedButton(
             disabledColor: Colors.redAccent,
             onPressed: null,
@@ -130,6 +141,11 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
                 color: Colors.blueGrey,
               ),
             ),
+          ),
+          Icon(
+            Icons.beach_access,
+            color: Colors.blue,
+            size: 36.0,
           ),
         ],
       ),
