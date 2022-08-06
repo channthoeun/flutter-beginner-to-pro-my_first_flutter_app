@@ -144,11 +144,13 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
                   } else if (states.contains(MaterialState.disabled)) {
                     return Colors.green;
                   }
-                  return Colors.white; // Use the component's default.
+                  return Colors.greenAccent; // Use the component's default.
                 },
               ),
             ),
-            onPressed: null,
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(snackBarThree);
+            },
             child: const Text(
               'You have chosen answer 3',
               style: TextStyle(
