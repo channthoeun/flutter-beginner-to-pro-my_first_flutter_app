@@ -19,6 +19,24 @@ final SnackBar snackBarThree = const SnackBar(
       style: TextStyle(fontSize: 30),
     )
 );
+const SnackBar snackBarButton1 = SnackBar(
+    content: Text(
+      'Answer 1 has been chosen!',
+      style: TextStyle(fontSize: 30),
+    )
+);
+const SnackBar snackBarButton2 = SnackBar(
+    content: Text(
+      'Answer 2 has been chosen!',
+      style: TextStyle(fontSize: 30),
+    )
+);
+const SnackBar snackBarButton3 = SnackBar(
+    content: Text(
+      'Answer 3 has been chosen!',
+      style: TextStyle(fontSize: 30),
+    )
+);
 
 void clickNextPage(BuildContext context) {
   Navigator.push(
@@ -98,10 +116,27 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               fontSize: 25,
             ),
           ),
-          RaisedButton(
-            disabledColor: Colors.redAccent,
-            onPressed: null,
-            child: Text(
+          ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                    (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Theme
+                        .of(context)
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.5);
+                  } else if (states.contains(MaterialState.disabled)) {
+                    return Colors.green;
+                  }
+                  return Colors.greenAccent; // Use the component's default.
+                },
+              ),
+            ),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(snackBarButton1);
+            },
+            child: const Text(
               'You have chosen answer 1',
               style: TextStyle(
                 fontSize: 22,
@@ -115,10 +150,27 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
             size: 24.0,
             semanticLabel: 'Text to announce in accessibility modes',
           ),
-          RaisedButton(
-            disabledColor: Colors.redAccent,
-            onPressed: null,
-            child: Text(
+          ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                    (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.pressed)) {
+                    return Theme
+                        .of(context)
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.5);
+                  } else if (states.contains(MaterialState.disabled)) {
+                    return Colors.green;
+                  }
+                  return Colors.greenAccent; // Use the component's default.
+                },
+              ),
+            ),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(snackBarButton2);
+            },
+            child: const Text(
               'You have chosen answer 2',
               style: TextStyle(
                 fontSize: 22,
@@ -149,7 +201,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(snackBarThree);
+              ScaffoldMessenger.of(context).showSnackBar(snackBarButton3);
             },
             child: const Text(
               'You have chosen answer 3',
